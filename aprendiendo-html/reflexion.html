@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reflexión</title>
+  <script src="js/reflexiones.js" defer></script>
+  <script defer>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+
+      const r = reflexiones.find(x => x.id === id);
+      if (!r) {
+        document.getElementById('contenido').innerHTML = '<p>Reflexión no encontrada.</p>';
+        return;
+      }
+
+      document.title = r.titulo;
+      document.getElementById('titulo').innerText = r.titulo;
+      document.getElementById('cita').innerText = r.cita;
+
+      const cuerpo = document.getElementById('cuerpo');
+      r.parrafos.forEach(p => {
+        const parrafo = document.createElement('p');
+        parrafo.textContent = p;
+        cuerpo.appendChild(parrafo);
+      });
+    };
+  </script>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Georgia, serif;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    blockquote {
+      font-style: italic;
+      border-left: 4px solid #888;
+      padding-left: 1rem;
+      color: #ccc;
+      margin: 1.5rem 0;
+    }
+    .nav {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .nav a {
+      background-color: #444;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 0.5rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div id="contenido">
+    <h1 id="titulo">Cargando reflexión...</h1>
+    <blockquote id="cita"></blockquote>
+    <div id="cuerpo"></div>
+
+    <div class="nav">
+      <a href="index.html">⬅ Volver al inicio</a>
+    </div>
+  </div>
+</body>
+</html>
