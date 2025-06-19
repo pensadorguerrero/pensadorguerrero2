@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>El Pensador Guerrero</title>
   <style>
+    /* Animación al cargar la página */
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animación suave para los títulos del encabezado */
+header h1, header h2 {
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efecto de resplandor en enlaces al pasar el ratón */
+nav a:hover, #lista-reflexiones a:hover {
+  background-color: #333;
+  box-shadow: 0 0 8px #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Transiciones suaves en elementos interactivos */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Animación en lista de reflexiones */
+#lista-reflexiones li {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: zoomIn 0.5s forwards;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
     /* Estilos básicos para diseño sobrio y centrado */
     body {
       background-color: #111;
@@ -151,17 +204,30 @@
     //   { titulo: "Más allá del miedo", url: "#" },
     //   { titulo: "Fuerza interior", url: "#" }
     // ];
-    const listaRef = document.getElementById('lista-reflexiones');
-    if (typeof reflexiones !== 'undefined') {
-      reflexiones.forEach(ref => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = ref.url;
-        a.textContent = ref.titulo;
-        li.appendChild(a);
-        listaRef.appendChild(li);
-      });
-    }
+   const listaRef = document.getElementById('lista-reflexiones');
+   if (typeof reflexiones !== 'undefined') {
+    reflexiones.forEach((ref, index) => {
+      const li = document.createElement('li');
+      li.style.setProperty('--i', index);
+      const a = document.createElement('a');
+      a.href = ref.url;
+      a.textContent = ref.titulo;
+      li.appendChild(a);
+      listaRef.appendChild(li);
+  });
+}
+
   </script>
+  <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
+<script>
+  const clickSound = document.getElementById("click-sound");
+  document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+</script>
+
 </body>
 </html>
