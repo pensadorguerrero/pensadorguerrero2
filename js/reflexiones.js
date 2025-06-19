@@ -54,7 +54,7 @@ parrafos: [
           "Su ejemplo inspiró a otros soldados a mantenerse firmes. Al final, luchó con decisión y fue reconocido por su valor. Esta historia muestra ",
            "que el coraje no significa no tener miedo. Significa actuar a pesar de él. El deber y la voluntad pueden ser más fuertes que el temor."
      ],
-   url: "reflexion.htlm?id=valor"
+   url: "reflexion.html?id=valor"
 
 
 
