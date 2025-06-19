@@ -43,19 +43,4 @@ const reflexiones = [
     ],
     url: "reflexion.html?id=silencio"
   },
-  {
-id: "valor",
-titulo: "El valor nace del compromiso",
-cita: "El valor no es la ausencia de miedo, sino la decisión de que algo es más importante que el miedo.",
-parrafos: [
-  "Un joven soldado ateniense, atrapado en medio del combate, fue invadido por el miedo.",
-          " Paralizado, dudó si huir o rendirse. Recordó entonces su deber con la ciudad y decidió actuar como si fuera valiente.",
-          "Aunque el temor seguía dentro de él, sus acciones empezaron a reflejar coraje. Paso a paso, recuperó el control de su cuerpo y su mente.",
-          "Su ejemplo inspiró a otros soldados a mantenerse firmes. Al final, luchó con decisión y fue reconocido por su valor. Esta historia muestra ",
-           "que el coraje no significa no tener miedo. Significa actuar a pesar de él. El deber y la voluntad pueden ser más fuertes que el temor."
-     ],
-   url: "reflexion.html?id=valor"
-
-
-
 ];
