@@ -228,6 +228,15 @@ a, button {
     });
   });
 </script>
+  <p>Esta página ha sido visitada <span id="contador">...</span> veces.</p>
+<script>
+  fetch('https://api.countapi.xyz/hit/tu-nombre-unico/pagina')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('contador').innerText = data.value;
+    });
+</script>
+
 
 </body>
 </html>
