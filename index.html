@@ -162,6 +162,7 @@ a, button {
 
   <nav>
     <ul>
+      <li><a href="ancestros.html">Explora el linaje del Pensador Guerrero</a></li>
       <li><a href="#">Inicio</a></li>
       <li><a href="#reflexiones">Reflexiones</a></li>
       <li><a href="#">Estrategia</a></li>
@@ -218,16 +219,6 @@ a, button {
 }
 
   </script>
-  <audio id="click-sound" src="sounds/click.mp3" preload="auto"></audio>
-<script>
-  const clickSound = document.getElementById("click-sound");
-  document.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
-    });
-  });
-</script>
   <p>Esta página ha sido visitada <span id="contador">...</span> veces.</p>
 <script>
   fetch('https://api.countapi.xyz/hit/rubenpichel/index')
@@ -236,7 +227,11 @@ a, button {
       document.getElementById('contador').innerText = data.value;
     });
 </script>
-
+  
+ 
+  </body>
+</html>
+</script>
 
 </body>
 </html>
