@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>📜 Deja tu mensaje al Pensador Guerrero</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f0e6d2;
+      font-family: "Georgia", "Palatino Linotype", "Book Antiqua", serif;
+      padding: 40px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #e0c186;
+      border-bottom: 2px solid #5e442b;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #1a1a1a;
+      border: 1px solid #3d2b1f;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #0008;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+      color: #d9caa7;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      background-color: #262626;
+      color: #fff;
+      border: 1px solid #5e442b;
+      border-radius: 4px;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: #5e442b;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #7a5a3c;
+      box-shadow: 0 0 8px #fff3;
+    }
+  </style>
+</head>
+<body>
+  <h2>📜 Deja tu mensaje al Pensador Guerrero</h2>
+  <form action="https://formspree.io/f/xyzjdoll" method="POST">
+    <label for="nombre">Tu nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="mensaje">Tu mensaje:</label>
+    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+    <button type="submit">Enviar mensaje</button>
+  </form>
+</body>
+</html>
