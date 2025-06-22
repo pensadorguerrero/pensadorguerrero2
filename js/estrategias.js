@@ -13,12 +13,15 @@ const estrategias = [
   },
   {
     titulo: "Visualización y la Ley Nº 29: Planifica hasta el final",
-    texto: "Visualizar no es soñar en abstracto; es ver con claridad el destino. La Ley 29 de Robert Greene dice 'Planifica hasta el final'. Combinar ambas te permite recorrer mentalmente cada paso antes de actuar: defines tu objetivo, visualizas hacia atrás desde el éxito, anticipas amenazas y diseñas una ruta flexible. Visualizar el final es planificar con los ojos del alma."
+    texto: 'Visualizar no es soñar en abstracto; es ver con claridad el destino. La Ley 29 de Robert Greene dice "Planifica hasta el final". Combinar ambas te permite recorrer mentalmente cada paso antes de actuar: defines tu objetivo, visualizas hacia atrás desde el éxito, anticipas amenazas y diseñas una ruta flexible. Visualizar el final es planificar con los ojos del alma.<br><br><a href="ley29.html" target="_blank">Leer reflexión completa sobre la Ley 29</a>'
   }
 ];
 
 window.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("contenedor-estrategias");
+  if (!contenedor) return;
+
+  const fragmento = document.createDocumentFragment();
 
   estrategias.forEach(estrategia => {
     const seccion = document.createElement("section");
@@ -26,27 +29,45 @@ window.addEventListener("DOMContentLoaded", () => {
     const p = document.createElement("p");
 
     h2.textContent = estrategia.titulo;
-    p.textContent = estrategia.texto;
+    p.innerHTML = estrategia.texto;  // <- CAMBIO CLAVE AQUÍ
 
-    // Solo alternamos clase "mostrar" al hacer clic
     h2.addEventListener("click", () => {
       seccion.classList.toggle("mostrar");
     });
 
     seccion.appendChild(h2);
     seccion.appendChild(p);
-    contenedor.appendChild(seccion);
+    fragmento.appendChild(seccion);
   });
 
-  // Botón Mostrar/Ocultar todo
+  contenedor.appendChild(fragmento);
+
+  // Mostrar/Ocultar todo
   const botonToggle = document.getElementById("toggle-todo");
   let todoVisible = false;
 
-  botonToggle.addEventListener("click", () => {
+  botonToggle?.addEventListener("click", () => {
     todoVisible = !todoVisible;
     document.querySelectorAll("#contenedor-estrategias section").forEach(seccion => {
       seccion.classList.toggle("mostrar", todoVisible);
     });
     botonToggle.textContent = todoVisible ? "Ocultar todo" : "Mostrar todo";
   });
+
+  // Audio fondo
+  const audio = document.getElementById("audio-fondo");
+  if (audio) audio.volume = 0.5;
+
+  // Botón silenciar
+  const botonAudio = document.getElementById("toggle-audio");
+  botonAudio?.addEventListener("click", () => {
+    if (audio) {
+      audio.muted = !audio.muted;
+      botonAudio.textContent = audio.muted ? "🔇" : "🔊";
+    }
+  });
 });
+
+
+
+
