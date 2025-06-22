@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Estrategias | Pensador Guerrero</title>
+  <script src="js/estrategias.js" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #1a1a1a;
+      color: #e0d8c3;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 3rem;
+      text-align: center;
+      color: #f0e6d2;
+      margin-bottom: 2rem;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #c2a36a;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f0e6d2;
+    }
+
+    #toggle-todo {
+      background-color: #8c6f4d;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem 1.5rem;
+      background-color: #2a2a2a;
+      border-left: 5px solid #8c6f4d;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(100, 80, 50, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    h2 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #d6c7a1;
+      cursor: pointer;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      margin: 0;
+    }
+
+    section.mostrar p {
+      max-height: 500px;
+      opacity: 1;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="reflexiones.html">Reflexiones</a>
+    <a href="estrategia.html">Estrategias</a>
+  </nav>
+
+  <h1>Estrategias del Pensador Guerrero</h1>
+
+  <div style="text-align: center;">
+    <button id="toggle-todo">Mostrar todo</button>
+  </div>
+
+  <div id="contenedor-estrategias"></div>
+
+</body>
+</html>
