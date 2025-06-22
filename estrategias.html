@@ -99,8 +99,30 @@
   <div style="text-align: center;">
     <button id="toggle-todo">Mostrar todo</button>
   </div>
+  <button id="toggle-audio" style="
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #8c6f4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  cursor: pointer;
+  z-index: 9999;
+">
+  🔊
+</button>
 
   <div id="contenedor-estrategias"></div>
+  <audio id="audio-fondo" autoplay loop>
+  <source src="agua.mp3" type="audio/mpeg">
+  Tu navegador no soporta audio HTML5.
+</audio>
+
+  
 
 </body>
 </html>
