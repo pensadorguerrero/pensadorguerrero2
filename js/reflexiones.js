@@ -57,6 +57,8 @@ const reflexiones = [
       
     ],
     url:"reflexion.html?id=valor"
-  }
+  },
+  { titulo: "La dicotomía de la decisión", url: "dicotomia.html" }
+
   
 ];
