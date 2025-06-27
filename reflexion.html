@@ -2,76 +2,101 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Reflexión</title>
-  <script src="js/reflexiones.js" defer></script>
-  <script defer>
-    window.onload = function () {
-      const params = new URLSearchParams(window.location.search);
-      const id = params.get('id');
-
-      const r = reflexiones.find(x => x.id === id);
-      if (!r) {
-        document.getElementById('contenido').innerHTML = '<p>Reflexión no encontrada.</p>';
-        return;
-      }
-
-      document.title = r.titulo;
-      document.getElementById('titulo').innerText = r.titulo;
-      document.getElementById('cita').innerText = r.cita;
-
-      const cuerpo = document.getElementById('cuerpo');
-      r.parrafos.forEach(p => {
-        const parrafo = document.createElement('p');
-        parrafo.textContent = p;
-        cuerpo.appendChild(parrafo);
-      });
-    };
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflexión - Pensador Guerrero</title>
   <style>
     body {
-      background-color: #111;
-      color: #fff;
+      margin: 0;
       font-family: Georgia, serif;
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+      color: #fff;
+      background-color: #000;
     }
+
+    #fondo-reflexion {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    #fondo-reflexion::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
     h1 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 2em;
+      margin-bottom: 0.5em;
     }
+
     blockquote {
       font-style: italic;
-      border-left: 4px solid #888;
-      padding-left: 1rem;
-      color: #ccc;
-      margin: 1.5rem 0;
-    }
-    .nav {
-      margin-top: 2rem;
       text-align: center;
+      margin: 1em 0;
+      opacity: 0.8;
     }
-    .nav a {
-      background-color: #444;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin: 0.5rem;
-      display: inline-block;
+
+    p {
+      line-height: 1.6;
+      margin: 1em 0;
     }
   </style>
 </head>
-<body>
-  <div id="contenido">
-    <h1 id="titulo">Cargando reflexión...</h1>
+<body id="fondo-reflexion">
+  <main>
+    <h1 id="titulo"></h1>
     <blockquote id="cita"></blockquote>
-    <div id="cuerpo"></div>
+    <div id="contenido"></div>
+  </main>
 
-    <div class="nav">
-      <a href="index.html">⬅ Volver al inicio</a>
-    </div>
-  </div>
+  <script src="js/reflexiones.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const reflexion = reflexiones.find(r => r.id === id);
+
+    if (reflexion) {
+      document.getElementById("titulo").textContent = reflexion.titulo;
+      document.getElementById("cita").textContent = reflexion.cita;
+      const cont = document.getElementById("contenido");
+
+      reflexion.parrafos.forEach(parrafo => {
+        const p = document.createElement("p");
+        p.textContent = parrafo;
+        cont.appendChild(p);
+      });
+
+      if (reflexion.historiaCompleta) {
+        const link = document.createElement("a");
+        link.href = reflexion.historiaCompleta;
+        link.textContent = "👉 Leer la historia completa";
+        link.style.display = "block";
+        link.style.marginTop = "2em";
+        link.style.color = "#ffd700";
+        link.style.fontWeight = "bold";
+        cont.appendChild(link);
+      }
+
+      if (reflexion.background) {
+        document.getElementById("fondo-reflexion").style.backgroundImage = `url('${reflexion.background}')`;
+      }
+    } else {
+      document.getElementById("titulo").textContent = "Reflexión no encontrada";
+    }
+  </script>
 </body>
 </html>
+
