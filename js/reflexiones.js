@@ -58,7 +58,23 @@ const reflexiones = [
     ],
     url:"reflexion.html?id=valor"
   },
-  { titulo: "La dicotomía de la decisión", url: "dicotomia.html" }
+  { titulo: "La dicotomía de la decisión", url: "dicotomia.html" },
+  {
+  id: "diablo",
+  titulo: "El Guerrero que fue vencido por el Diablo",
+  cita: "El verdadero enemigo no siempre se presenta con espada, a veces lo hace con deseo.",
+  parrafos: [
+    "Un joven guerrero, prometedor y lleno de energía, fue lentamente vencido no en combate, sino en espíritu...",
+    "Durante diez años, un espíritu lo acompañó, alimentando sus fantasías, debilitando su voluntad...",
+    "Cuando llegó el momento de actuar, ya no quedaba fuerza ni esperanza en él. Había sido derrotado antes de la batalla.",
+    "La oscuridad no necesita enfrentarte de frente. Solo necesita que dejes de entrenar, de soñar, de creer.",
+    "Esta es la historia de un guerrero vencido por el mismísimo diablo... no por su poder, sino por su astucia."
+  ],
+  historiaCompleta: "diablo-historia.html",
+  url: "reflexion.html?id=diablo",
+  background: "espada_demonio.png",
+}
+
 
   
 ];
