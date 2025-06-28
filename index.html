@@ -66,6 +66,27 @@ a, button {
       margin: 0;
       padding: 0;
       text-align: center; /* Centrar texto por defecto */
+      position: relative;
+      z-index: 1;
+
+ 
+}
+  body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 49%;
+  width: 1107px; /* Ajusta el tamaño según necesites */
+  height: 1045px;
+  background: url('images/logo.jpg') no-repeat center center;
+  background-size: contain;
+  opacity: 0.13; /* Controla lo sutil que sea */
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none; /* Que no interfiera con clicks */
+}
+  
+
     }
     header {
       padding: 40px 20px 20px;
