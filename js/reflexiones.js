@@ -1,80 +1,50 @@
 const reflexiones = [
   {
-    id: "miedo",
-    titulo: "El miedo y las Bene Gesserit",
-    cita: "No conoceré el miedo. El miedo mata la mente...",
-    parrafos: [
-      "En el universo de Dune, las Bene Gesserit enseñan una disciplina mental que trasciende el terror...",
-      "Cuando sentimos miedo, nuestra mente puede perder claridad...",
-      "En la vida real, también enfrentamos incertidumbres que nos paralizan..."
-    ],
-    url: "reflexion.html?id=miedo"
+    titulo: "La metáfora del pájaro y la rama",
+    contenido: "El pájaro se posa tranquilo sobre la rama, no porque confíe en ella, sino porque confía en sus alas. El guerrero no depende de un suelo firme, de una situación estable ni de la aprobación externa. Su fuerza está dentro. La rama puede quebrarse, el viento puede cambiar, pero mientras tenga alas —disciplina, voluntad, temple— volará otra vez. Quien basa su seguridad en lo externo vive con miedo. Quien cultiva el poder interior camina sin temblar, aunque el mundo a su alrededor se derrumbe. No te aferres a la rama. Entrena tus alas."
   },
   {
-    id: "pajaro",
-    titulo: "El pájaro y la rama",
-    cita: "Un pájaro no confía en la rama sobre la que se posa, sino en sus propias alas.",
-    parrafos: [
-      "Esta metáfora nos recuerda que no debemos poner nuestra seguridad en circunstancias externas...",
-      "Pero si, como el pájaro, confiamos en nuestras propias alas...",
-      "Desarrollar nuestras “alas” significa cultivar lo interno..."
-    ],
-    url: "reflexion.html?id=pajaro"
+    titulo: "La armadura invisible",
+    contenido: "Muchos caminan por la vida cubiertos con una armadura que nadie ve. Hecha de indiferencia, sarcasmo, aislamiento. Se construye con decepciones, se refuerza con miedos. Parece proteger, pero encierra. El guerrero también ha sido herido. Pero no se queda escondido detrás del metal. Aprende a reconocer su coraza, a quitarla cuando hace falta, y a mostrar su rostro al mundo sin vergüenza. Las verdaderas heridas no están en la piel, sino en el alma. Y las verdaderas cicatrices no son debilidades: son señales de que sanaste. Desnudar el alma también es un acto de guerra."
   },
   {
-    id: "intencion",
-    titulo: "El filo de la intención",
-    cita: "Una espada sin intención es solo metal.",
-    parrafos: [
-      "La intención es lo que da dirección al acto. Un guerrero puede blandir su espada, pero sin propósito, cada golpe es vacío.",
-      "En la vida, actuar sin intención nos aleja de nuestro camino. La mente debe estar alineada con lo que hacemos, y no dejarnos llevar por la rutina o el impulso.",
-      "Afilar la intención es meditar antes de actuar, preguntarnos por qué y para qué. Así cada paso es parte del camino, no una simple reacción."
-    ],
-    url: "reflexion.html?id=intencion"
+    titulo: "Fuego en la rutina",
+    contenido: "Hay quienes huyen de la rutina como si fuera una cárcel. Pero el guerrero sabe que en la repetición diaria se forja la grandeza. Levantarse a la misma hora. Respirar hondo. Entrenar el cuerpo. Leer. Pensar. Comer con intención. Escribir lo vivido. No hay gloria sin monotonía. No hay maestría sin constancia. Cada día aparentemente igual no es una copia, es una capa más sobre la armadura del carácter. Cuando todo el mundo se dispersa en distracciones, tú te mantienes firme, ardiendo por dentro. No huyas de la rutina: domínala, y te hará imparable."
   },
   {
-    id: "silencio",
-    titulo: "El silencio forja el acero",
-    cita: "El ruido distrae, el silencio revela.",
-    parrafos: [
-      "El ruido externo y el interno nos mantienen en la superficie. Es en el silencio donde emergen las verdades profundas.",
-      "El guerrero no le teme al silencio. En él se escucha a sí mismo, observa sus sombras, y refina su estrategia.",
-      "Como el acero se forja en calma entre martillazos, el carácter se forja en la quietud. Sin silencio, no hay temple."
-    ],
-    url: "reflexion.html?id=silencio"
+    titulo: "El filo del silencio",
+    contenido: "El mundo habla demasiado. Opiniones, notificaciones, voces vacías. Pero el guerrero no teme al silencio: lo busca. En el silencio afila su mente como una espada. En el silencio escucha su respiración, su pulso, su verdad. Allí donde el ruido se apaga, el espíritu se escucha con nitidez. La calma no es ausencia de lucha: es su control perfecto. No todos saben estar consigo mismos. El que domina el silencio, domina su impulso. Y el que domina su impulso, puede decidir cuándo atacar, cuándo esperar, cuándo retirarse. El silencio es filo. No ruido. No reacción. Precisión."
   },
   {
-    id:"valor",
-    titulo: "El valor nace del compromiso",
-    cita: "El valor no es la ausencia de miedo, sino la decisión de que algo es más importante que el miedo.",
-    parrafos: [
-      "En medio del caos de la batalla, un joven soldado ateniense sintió que el miedo lo paralizaba. Todo en su",
-      "interior le pedía huir. Pero en lugar de rendirse, decidió avanzar como si fuera valiente, recordando que el",
-      "deber hacia su ciudad era más fuerte que el temor. Paso a paso, su cuerpo siguió a su decisión, y su miedo",
-      "cedió ante el coraje. No se trataba de no tener miedo, sino de no dejar que el miedo decidiera por él.",
-      "Esta historia anónima de la antigua Grecia nos recuerda que el verdadero valor no es la ausencia de miedo,",
-      "sino la voluntad de actuar a pesar de él.",
-      
-    ],
-    url:"reflexion.html?id=valor"
-  },
-  { titulo: "La dicotomía de la decisión", url: "dicotomia.html" },
-  {
-  id: "diablo",
-  titulo: "El Guerrero que fue vencido por el Diablo",
-  cita: "El verdadero enemigo no siempre se presenta con espada, a veces lo hace con deseo.",
-  parrafos: [
-    "Un joven guerrero, prometedor y lleno de energía, fue lentamente vencido no en combate, sino en espíritu...",
-    "Durante diez años, un espíritu lo acompañó, alimentando sus fantasías, debilitando su voluntad...",
-    "Cuando llegó el momento de actuar, ya no quedaba fuerza ni esperanza en él. Había sido derrotado antes de la batalla.",
-    "La oscuridad no necesita enfrentarte de frente. Solo necesita que dejes de entrenar, de soñar, de creer.",
-    "Esta es la historia de un guerrero vencido por el mismísimo diablo... no por su poder, sino por su astucia."
-  ],
-  historiaCompleta: "diablo-historia.html",
-  url: "reflexion.html?id=diablo",
-  background: "espada_demonio.png",
-}
-
-
-  
+    titulo: "Cicatrices que enseñan",
+    contenido: "Cada cicatriz cuenta una historia. No son marcas de debilidad, sino señales de que sobreviviste. Que resististe. Que luchaste. Que aprendiste. Las cicatrices del guerrero no buscan lástima, ni son trofeos vacíos. Son mapas del camino andado. Algunas duelen al tocarlas. Otras se volvieron parte de la piel. Pero todas enseñan algo. Que el dolor es parte del viaje. Que caerse no es el final. Que sanar también es parte del combate. No escondas tus cicatrices. Muéstralas con honor. Porque hablan de una batalla real: la tuya."
+  }
 ];
+
+const contenedor = document.getElementById("contenedor-reflexiones");
+
+reflexiones.forEach(ref => {
+  const details = document.createElement("details");
+  details.classList.add("border", "rounded", "p-2");
+
+  const summary = document.createElement("summary");
+  summary.classList.add("cursor-pointer", "font-semibold");
+  summary.textContent = ref.titulo;
+
+  const p = document.createElement("p");
+  p.classList.add("mt-2");
+  p.textContent = ref.contenido;
+
+  details.appendChild(summary);
+  details.appendChild(p);
+  contenedor.appendChild(details);
+});
+
+// Función para mostrar/ocultar todas las reflexiones
+let reflexionesMostradas = false;
+function toggleAllReflexiones() {
+  const detalles = document.querySelectorAll('#contenedor-reflexiones details');
+  reflexionesMostradas = !reflexionesMostradas;
+  detalles.forEach(d => d.open = reflexionesMostradas);
+  document.querySelector('button').textContent = reflexionesMostradas ? "Ocultar todo" : "Mostrar todo";
+}
