@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflexiones - El Pensador Guerrero</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      font-style: italic;
+      margin: 10px 0 0;
+      font-weight: normal;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    nav li {
+      margin: 0 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      box-shadow: 0 0 8px #fff;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.8em;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    details {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #000;
+      padding: 20px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    footer p {
+      color: #ccc;
+      font-size: 0.9em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>El Pensador Guerrero</h1>
+    <h2>Reflexiones sobre disciplina, estrategia y espíritu guerrero</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="ancestros.html">Explora el linaje del Pensador Guerrero</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="estrategias.html">Estrategia</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="mensajes.html">📬 Deja tu mensaje</a></li>
+      <li><a href="lectores.html">📖 Mensajes del público</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Reflexiones</h2>
+    <button onclick="toggleAllReflexiones()">Mostrar todo</button>
+    <div id="contenedor-reflexiones"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 El Pensador Guerrero. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Carga el archivo que contiene las reflexiones en formato acordeón -->
+  <script src="js/reflexiones.js"></script>
+
+</body>
+</html>
