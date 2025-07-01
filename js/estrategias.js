@@ -14,6 +14,14 @@ const estrategias = [
   {
     titulo: "Visualización y la Ley Nº 29: Planifica hasta el final",
     texto: 'Visualizar no es soñar en abstracto; es ver con claridad el destino. La Ley 29 de Robert Greene dice "Planifica hasta el final". Combinar ambas te permite recorrer mentalmente cada paso antes de actuar: defines tu objetivo, visualizas hacia atrás desde el éxito, anticipas amenazas y diseñas una ruta flexible. Visualizar el final es planificar con los ojos del alma.<br><br><a href="ley29.html" target="_blank">Leer reflexión completa sobre la Ley 29</a>'
+  },
+
+  {
+    titulo: "La percepción se ajusta a la voluntad",
+    texto: `Esta idea aparece tanto en la filosofía estoica como en la psicología moderna. Jordan B. Peterson, en su primera regla —"Ponte derecho con los hombros hacia atrás"—, muestra cómo una actitud firme transforma lo que percibimos. Si eliges mirar desde la voluntad activa, incluso el caos se convierte en oportunidad.<br><br>
+    <strong>Ejemplo:</strong> Dos personas pierden su empleo. Una piensa: "Es una oportunidad para reinventarme". La otra: "Todo está en mi contra". Ambas viven lo mismo, pero su percepción depende de su voluntad.<br><br>
+    🎯 <strong>Metáfora visual:</strong> Imagina un <em>espejo curvo</em>. No refleja la realidad tal como es, sino según su forma. Tu voluntad es esa <em>curvatura</em>: si estás doblado por la queja o el miedo, el mundo se deforma. Si estás firme y decidido, el reflejo se endereza. 👉 <strong>No es el mundo el que cambia, sino el modo en que lo estás viendo.</strong><br><br>
+    <strong>Reflexión:</strong> No esperes a que el mundo cambie para cambiar tu mirada. Empieza por dentro.`
   }
 ];
 
