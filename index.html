@@ -78,7 +78,7 @@ a, button {
   left: 49%;
   width: 1107px; /* Ajusta el tamaño según necesites */
   height: 1045px;
-  background: url('images/logo.jpg') no-repeat center center;
+  background: url('images/sellopensador.jpg') no-repeat center center;
   background-size: contain;
   opacity: 0.13; /* Controla lo sutil que sea */
   transform: translate(-50%, -50%);
@@ -173,6 +173,52 @@ a, button {
       font-size: 0.9em;
       color: #ccc;
     }
+    #portal-guerrero {
+  margin-top: 60px;
+  text-align: center;
+}
+#portal-guerrero h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+.tarjetas-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.tarjeta {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+.tarjeta h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+}
+.tarjeta p {
+  font-size: 0.95em;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+.tarjeta a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+.tarjeta a:hover {
+  text-decoration: underline;
+}
+
   </style>
 </head>
 <body>
@@ -183,9 +229,7 @@ a, button {
 <nav>
   <ul>
     <li><a href="ancestros.html">Explora el linaje del Pensador Guerrero</a></li>
-    <li><a href="#">Inicio</a></li>
-    <li><a href="reflexiones.html">Reflexiones</a></li>
-    <li><a href="estrategias.html">Estrategia</a></li>
+    <li><a href="#">Inicio</a></li>  
     <li><a href="contacto.html">Contacto</a></li>
     <li><a href="mensajes.html">📬 Deja tu mensaje</a></li>
     <li><a href="lectores.html">📖 Mensajes del público</a></li>
@@ -203,6 +247,30 @@ a, button {
          Cada desafío superado con perseverancia fortalece el espíritu, demostrando 
          que con enfoque y voluntad se puede vencer cualquier temor.</p>
     </article>
+<section id="portal-guerrero">
+  <h2>Explora el Camino del Guerrero</h2>
+  <div class="tarjetas-contenedor">
+    
+    <div class="tarjeta">
+      <h3>🔥 Estrategias</h3>
+      <p>Conceptos y tácticas para afrontar el combate diario con mente fría y propósito claro.</p>
+      <a href="estrategias.html">Ver Estrategias →</a>
+    </div>
+
+    <div class="tarjeta">
+      <h3>🧘 Meditaciones</h3>
+      <p>Entrena tu mente con prácticas estoicas que fortalecen tu interior frente a la adversidad.</p>
+      <a href="meditaciones.html">Ver Meditaciones →</a>
+    </div>
+
+    <div class="tarjeta">
+      <h3>💭 Reflexiones</h3>
+      <p>Pensamientos del guerrero para templar el carácter y recordar el propósito en cada paso.</p>
+      <a href="reflexiones.html">Ver Reflexiones →</a>
+    </div>
+
+  </div>
+</section>
 
    
   </main>
