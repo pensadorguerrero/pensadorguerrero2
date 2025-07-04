@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premeditatio Malorum</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .bloque {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .bloque h3 {
+      margin: 0;
+      padding: 15px;
+      font-size: 1.1em;
+      background-color: #222;
+      cursor: pointer;
+    }
+
+    .bloque h3:hover {
+      background-color: #333;
+    }
+
+    .contenido {
+      display: none;
+      padding: 15px;
+      color: #ccc;
+      font-size: 0.95em;
+      line-height: 1.5em;
+    }
+
+    .bloque.activo .contenido {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Premeditatio Malorum</h1>
+    <p>Una práctica estoica para imaginar los males posibles y templar el alma</p>
+  </header>
+
+  <main>
+    <div class="bloque">
+      <h3 onclick="toggle(this)">1. Preparación mental</h3>
+      <div class="contenido">
+        Siéntate en silencio. Respira profundamente 3 veces. Visualiza que entras en una sala interior de estrategia, como un guerrero antes de una batalla.<br><br>
+        <strong>Frase para centrarte:</strong><br>
+        “No temo al futuro, me preparo para él con serenidad.”
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h3 onclick="toggle(this)">2. Elige una adversidad concreta</h3>
+      <div class="contenido">
+        Piensa en algo que te preocupa o que podría salir mal.<br><br>
+        - ¿Qué es lo peor que podría pasar?<br>
+        - ¿Qué parte de eso me da más miedo?<br><br>
+        <em>Ejemplos:</em><br>
+        - Perder un trabajo<br>
+        - Enfermedad inesperada<br>
+        - Fracasar en algo importante
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h3 onclick="toggle(this)">3. Desmonta el miedo con lógica estoica</h3>
+      <div class="contenido">
+        Responde por escrito:<br><br>
+        - ¿Qué cosas dependerían de mí en esa situación?<br>
+        - ¿Qué recursos internos ya tengo para afrontarlo?<br>
+        - ¿Qué pasaría si lo soporto y sigo adelante?<br>
+        - ¿Y si no ocurre? ¿Qué puedo valorar hoy?
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h3 onclick="toggle(this)">4. Frase de cierre</h3>
+      <div class="contenido">
+        Elige una frase para cerrar con aceptación y fortaleza:<br><br>
+        “Si llega, lo soportaré. Si no llega, lo agradeceré. Nada me toma por sorpresa, porque he entrenado mi alma.”<br><br>
+        O crea tu propia versión.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggle(element) {
+      const bloque = element.parentElement;
+      bloque.classList.toggle('activo');
+    }
+  </script>
+</body>
+</html>
