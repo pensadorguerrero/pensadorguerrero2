@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Código Mental | Pensador Guerrero</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --bg-alt: #171a21;
+      --gold: #c8a96b;
+      --gold-soft: #e0c693;
+      --text: #f2f2f2;
+      --muted: #b7bcc7;
+      --line: rgba(200, 169, 107, 0.22);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Georgia", "Times New Roman", serif;
+      background: linear-gradient(180deg, #0b0d11 0%, #12151c 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px 60px;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+        url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero .eyebrow {
+      color: var(--gold-soft);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.85rem;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: var(--gold-soft);
+      text-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #e7e7e7;
+      font-size: 1.1rem;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 70px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--gold-soft);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(200, 169, 107, 0.5);
+    }
+
+    .card-number {
+      display: inline-block;
+      font-size: 0.9rem;
+      color: var(--gold-soft);
+      border: 1px solid var(--line);
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 {
+      color: var(--gold);
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .principio {
+      padding: 14px 16px;
+      background: rgba(200, 169, 107, 0.08);
+      border-left: 4px solid var(--gold);
+      border-radius: 10px;
+      color: #f3e6c9;
+      font-style: italic;
+    }
+
+    .regla-final {
+      margin-top: 60px;
+      background: var(--bg-alt);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 40px 28px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .regla-final h2 {
+      color: var(--gold-soft);
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .regla-final p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto 26px;
+    }
+
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 25px 0 30px;
+    }
+
+    .step {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .norte {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .norte span {
+      background: rgba(200, 169, 107, 0.1);
+      color: var(--gold-soft);
+      border: 1px solid var(--line);
+      padding: 10px 18px;
+      border-radius: 999px;
+    }
+
+    .mantra {
+      max-width: 900px;
+      margin: 70px auto 0;
+      text-align: center;
+      padding: 0 20px 80px;
+    }
+
+    .mantra blockquote {
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      line-height: 1.5;
+      color: #f7edd8;
+      font-style: italic;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 20px;
+    }
+
+    .firma {
+      margin-top: 20px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 20px 40px;
+      color: #8e95a3;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        min-height: 50vh;
+        padding-top: 70px;
+      }
+
+      .card {
+        padding: 22px 18px;
+      }
+
+      .regla-final {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Pensador Guerrero</div>
+      <h1>Código Mental del Guerrero-Pensador</h1>
+      <p>
+        Domina tu mente antes de pretender dominar el mundo. 
+        El verdadero combate comienza en el pensamiento.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <h2>Los 5 principios del dominio interior</h2>
+      <p>
+        El guerrero no elimina las dificultades. Aprende a verlas con claridad, 
+        a nombrar las mentiras de la mente y a regresar a su rumbo.
+      </p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="card-number">Principio 1</div>
+        <h3>Rechaza el pensamiento blanco o negro</h3>
+        <p>
+          La realidad no se divide solo entre victoria o derrota, éxito o fracaso.
+          Entre ambos extremos existe aprendizaje, progreso y transformación.
+        </p>
+        <div class="principio">
+          “Siempre hay aprendizaje entre los extremos.”
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">Principio 2</div>
+        <h3>Rompe la visión de túnel</h3>
+        <p>
+          La mente débil se fija solo en lo negativo. 
+          El pensador guerrero observa todo el campo de batalla: riesgo, oportunidad y salida.
+        </p>
+        <div class="principio">
+          “Donde hay problema, también hay oportunidad.”
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">Principio 3</div>
+        <h3>No te compares con ilusiones</h3>
+        <p>
+          Muchos enseñan solo su mejor momento. 
+          Pero tú conoces tu lucha real. No compitas con máscaras: compite con tu versión anterior.
+        </p>
+        <div class="principio">
+          “Compite solo con el hombre que fuiste ayer.”
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">Principio 4</div>
+        <h3>No saques conclusiones antes de tiempo</h3>
+        <p>
+          La batalla no termina antes del último segundo. 
+          Anticipar la derrota también es una forma de rendición.
+        </p>
+        <div class="principio">
+          “Mientras respires, el resultado puede cambiar.”
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-number">Principio 5</div>
+        <h3>No conviertas chispas en incendios</h3>
+        <p>
+          La mente exagera. El guerrero respira, evalúa y actúa. 
+          No todo problema merece el nombre de tragedia.
+        </p>
+        <div class="principio">
+          “Calma primero. Acción después.”
+        </div>
+      </article>
+    </div>
+
+    <div class="regla-final">
+      <h2>Regla final del Pensador Guerrero</h2>
+      <p>
+        Cuando la mente empiece a mentir, no la sigas. 
+        Reconoce la distorsión, nómbrala, descártala y vuelve a tu Norte Verdadero.
+      </p>
+
+      <div class="steps">
+        <div class="step">Reconoce el pensamiento</div>
+        <div class="step">Nómbralo</div>
+        <div class="step">Descártalo</div>
+        <div class="step">Vuelve a tu Norte</div>
+      </div>
+
+      <div class="norte">
+        <span>Tu disciplina</span>
+        <span>Tu familia</span>
+        <span>Tu propósito</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="mantra">
+    <blockquote>
+      “No todo lo que pienso es verdad.<br>
+      Pero sí soy responsable de hacia dónde dirijo mi mente.”
+    </blockquote>
+    <div class="firma">Pensador Guerrero</div>
+  </section>
+
+  <footer>
+    © Pensador Guerrero · Fortaleza mental · Claridad · Propósito
+  </footer>
+
+</body>
+</html>
